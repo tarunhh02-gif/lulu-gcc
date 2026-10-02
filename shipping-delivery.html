@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipping &amp; delivery — LULU</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   [BRAND] — SHIPPING &AMP; DELIVERY
+   Prefix: .lf-
+   ======================================== */
+
+.lf-root, .lf-root *, .lf-root *::before, .lf-root *::after {
+  margin: 0 !important; padding: 0 !important; box-sizing: border-box !important;
+}
+.lf-root {
+  font-family: 'Inter', sans-serif !important;
+  color: #16211B !important; background: #FFFFFF !important;
+  width: 100% !important; overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+.lf-root a { text-decoration: none !important; }
+.lf-root ul { list-style: none !important; }
+.lf-wrap { width: 100% !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 28px !important; }
+.lf-ic {
+  width: 16px !important; height: 16px !important; flex: 0 0 auto !important;
+  fill: none !important; stroke: currentColor !important; stroke-width: 2 !important;
+  stroke-linecap: round !important; stroke-linejoin: round !important;
+  display: inline-block !important; vertical-align: -0.18em !important;
+}
+.lf-ic-sm { width: 12px !important; height: 12px !important; stroke-width: 2.2 !important; }
+.lf-ic-lg { width: 20px !important; height: 20px !important; }
+.lf-ic-f { fill: currentColor !important; stroke: none !important; }
+
+/* TOP BAR */
+.lf-topbar { background: #6E1220 !important; color: #FFFFFF !important; padding: 8px 0 !important; }
+.lf-topbar-inner { display: flex !important; align-items: center !important; justify-content: center !important; }
+.lf-topbar-text { color: #FFFFFF !important; font-size: 12px !important; font-weight: 600 !important; }
+
+/* HEADER */
+.lf-header { background: #FFFFFF !important; border-bottom: 1px solid #E8EDE9 !important; padding: 14px 0 !important; }
+.lf-header-inner { display: flex !important; align-items: center !important; gap: 28px !important; flex-wrap: wrap !important; }
+.lf-logo { color: inherit !important; display: flex !important; align-items: center !important; gap: 10px !important; flex: 0 1 auto !important; min-width: 0 !important; }
+.lf-logo-mark {
+  height: 44px !important; min-width: 44px !important; max-width: 170px !important;
+  background: #F1F5F2 !important; border: 1px dashed #C3D5CA !important; border-radius: 8px !important;
+  position: relative !important; padding: 4px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important; flex: 0 0 auto !important;
+}
+.lf-logo-mark::after {
+  content: '[ LOGO ]' !important; position: absolute !important; top: 50% !important; left: 50% !important;
+  transform: translate(-50%, -50%) !important; color: #8B978F !important;
+  font-family: 'Inter', sans-serif !important; font-size: 8px !important; font-weight: 700 !important;
+  letter-spacing: 0.06em !important; white-space: nowrap !important;
+}
+.lf-logo-mark-dark { background: rgba(255,255,255,0.08) !important; border: 1px dashed rgba(255,255,255,0.18) !important; }
+.lf-logo-mark-dark::after { color: #98A6B5 !important; }
+.lf-logo-mark-on { background: transparent !important; border: none !important; padding: 0 !important; }
+.lf-logo-mark-on::after { content: '' !important; display: none !important; }
+.lf-logo-img {
+  height: 100% !important; width: auto !important; max-width: 100% !important;
+  object-fit: contain !important; display: block !important; position: relative !important; z-index: 2 !important;
+}
+.lf-logo-img[src^="["] { display: none !important; }
+.lf-logo-word { font-family: 'Poppins', sans-serif !important; font-size: 20px !important; font-weight: 800 !important; color: #0B6E3F !important; line-height: 1 !important; }
+.lf-logo-sub { font-family: 'Inter', sans-serif !important; font-size: 8px !important; font-weight: 600 !important; color: #6E7B74 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; }
+.lf-nav { display: flex !important; align-items: center !important; gap: 24px !important; margin-left: auto !important; flex-wrap: wrap !important; }
+.lf-nav-link { font-family: 'Inter', sans-serif !important; font-size: 13px !important; font-weight: 600 !important; color: #16211B !important; transition: color 0.16s ease !important; }
+.lf-nav-link:hover { color: #0B6E3F !important; }
+
+.lf-lang {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #F1F5F2 !important;
+  border: 1px solid #E1E8E3 !important;
+  border-radius: 22px !important;
+  padding: 3px !important;
+  flex: 0 0 auto !important;
+  margin-left: 18px !important;
+}
+.lf-lang-btn {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #56635B !important;
+  background: transparent !important;
+  border-radius: 20px !important;
+  padding: 7px 14px !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background 0.16s ease, color 0.16s ease !important;
+  white-space: nowrap !important;
+}
+.lf-lang-btn:hover { color: #0B6E3F !important; }
+.lf-lang-on {
+  background: #0B6E3F !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(11,110,63,0.24) !important;
+}
+.lf-lang-on:hover { color: #FFFFFF !important; }
+.lf-tablewrap {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 6px 0 18px !important;
+}
+.lf-tablewrap .lf-table { margin: 0 !important; min-width: 430px !important; }
+.lf-nav-wrap { display: flex !important; align-items: center !important; margin-left: auto !important; flex-wrap: wrap !important; }
+
+/* PAGE HEAD */
+.lf-page-head {
+  background: linear-gradient(120deg, #F3FAF5 0%, #FFFFFF 52%, #FDF4F2 100%) !important;
+  padding: 44px 0 40px !important; border-bottom: 1px solid #EDF1EE !important;
+}
+.lf-crumb { font-family: 'Inter', sans-serif !important; font-size: 11px !important; font-weight: 600 !important; color: #6E7B74 !important; display: flex !important; align-items: center !important; gap: 7px !important; margin-bottom: 14px !important; }
+.lf-crumb a { color: #0B6E3F !important; }
+.lf-page-title {
+  font-family: 'Poppins', sans-serif !important; font-size: 2.4rem !important; font-weight: 700 !important;
+  color: #16211B !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; margin-bottom: 12px !important;
+}
+.lf-page-sub { font-family: 'Inter', sans-serif !important; font-size: 15px !important; font-weight: 400 !important; color: #56635B !important; line-height: 1.65 !important; max-width: 640px !important; }
+.lf-updated {
+  display: inline-flex !important; align-items: center !important; gap: 7px !important;
+  background: #FFFFFF !important; border: 1px solid #E6ECE8 !important; border-radius: 20px !important;
+  padding: 5px 13px !important; font-family: 'Inter', sans-serif !important; font-size: 11px !important;
+  font-weight: 600 !important; color: #6E7B74 !important; margin-top: 18px !important;
+}
+
+/* CONTENT */
+.lf-doc { background: #FFFFFF !important; padding: 46px 0 60px !important; }
+.lf-doc-grid { display: grid !important; grid-template-columns: 220px 1fr !important; gap: 48px !important; align-items: start !important; }
+.lf-toc { position: sticky !important; top: 24px !important; border-left: 2px solid #EAF0EC !important; padding-left: 18px !important; }
+.lf-toc-title { font-family: 'Inter', sans-serif !important; font-size: 10px !important; font-weight: 700 !important; color: #8B978F !important; letter-spacing: 0.14em !important; text-transform: uppercase !important; margin-bottom: 12px !important; }
+.lf-toc li { margin-bottom: 9px !important; }
+.lf-toc a { font-family: 'Inter', sans-serif !important; font-size: 12px !important; font-weight: 500 !important; color: #56635B !important; line-height: 1.45 !important; transition: color 0.16s ease !important; }
+.lf-toc a:hover { color: #0B6E3F !important; }
+.lf-doc-body { max-width: 760px !important; }
+.lf-h2 {
+  font-family: 'Poppins', sans-serif !important; font-size: 1.25rem !important; font-weight: 700 !important;
+  color: #16211B !important; line-height: 1.3 !important; margin: 34px 0 12px !important;
+  padding-top: 10px !important; scroll-margin-top: 20px !important;
+}
+.lf-doc-body > .lf-h2:first-child { margin-top: 0 !important; padding-top: 0 !important; }
+.lf-p { font-family: 'Inter', sans-serif !important; font-size: 14.5px !important; font-weight: 400 !important; color: #2C3931 !important; line-height: 1.75 !important; margin-bottom: 14px !important; }
+.lf-p a { color: #0B6E3F !important; font-weight: 600 !important; }
+.lf-list { margin: 0 0 16px !important; }
+.lf-list li {
+  font-family: 'Inter', sans-serif !important; font-size: 14.5px !important; font-weight: 400 !important;
+  color: #2C3931 !important; line-height: 1.7 !important; margin-bottom: 9px !important;
+  padding-left: 20px !important; position: relative !important;
+}
+.lf-list li::before {
+  content: '' !important; position: absolute !important; left: 2px !important; top: 10px !important;
+  width: 6px !important; height: 6px !important; border-radius: 50% !important; background: #0B6E3F !important;
+}
+.lf-list strong, .lf-p strong { color: #16211B !important; font-weight: 700 !important; }
+.lf-callout {
+  background: #F6F9F7 !important; border: 1px solid #E7EDE9 !important; border-left: 3px solid #0B6E3F !important;
+  border-radius: 10px !important; padding: 16px 18px !important; margin: 18px 0 !important;
+}
+.lf-callout p { font-family: 'Inter', sans-serif !important; font-size: 13px !important; font-weight: 400 !important; color: #56635B !important; line-height: 1.7 !important; }
+.lf-callout strong { color: #16211B !important; font-weight: 700 !important; }
+.lf-table { width: 100% !important; border-collapse: collapse !important; margin: 6px 0 18px !important; }
+.lf-table th, .lf-table td {
+  font-family: 'Inter', sans-serif !important; font-size: 13px !important; text-align: left !important;
+  padding: 11px 14px !important; border-bottom: 1px solid #EDF1EE !important; color: #2C3931 !important; line-height: 1.55 !important;
+}
+.lf-table th { font-weight: 700 !important; color: #16211B !important; background: #F6F9F7 !important; }
+.lf-table tr:last-child td { border-bottom: none !important; }
+.lf-contact-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 14px !important; margin: 8px 0 22px !important; }
+.lf-contact-card { background: #FFFFFF !important; border: 1px solid #EBF0EC !important; border-radius: 14px !important; padding: 20px !important; }
+.lf-contact-ic {
+  width: 38px !important; height: 38px !important; background: #EAF5EE !important; border-radius: 10px !important;
+  color: #0B6E3F !important; display: flex !important; align-items: center !important; justify-content: center !important; margin-bottom: 12px !important;
+}
+.lf-contact-label { font-family: 'Inter', sans-serif !important; font-size: 9px !important; font-weight: 700 !important; color: #8B978F !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; display: block !important; }
+.lf-contact-value { font-family: 'Inter', sans-serif !important; font-size: 14px !important; font-weight: 700 !important; color: #16211B !important; display: block !important; margin-top: 5px !important; word-break: break-word !important; }
+.lf-contact-note { font-family: 'Inter', sans-serif !important; font-size: 11px !important; font-weight: 400 !important; color: #6E7B74 !important; display: block !important; margin-top: 5px !important; line-height: 1.5 !important; }
+.lf-cta {
+  background: #0B6E3F !important; color: #FFFFFF !important; padding: 14px 26px !important;
+  font-family: 'Inter', sans-serif !important; font-size: 14px !important; font-weight: 700 !important;
+  border-radius: 8px !important; border: none !important; cursor: pointer !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 9px !important;
+  box-shadow: 0 6px 18px rgba(11,110,63,0.24) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease !important;
+}
+.lf-cta:hover { background: #0A5C34 !important; transform: translateY(-2px) !important; box-shadow: 0 14px 28px rgba(11,110,63,0.30) !important; }
+.lf-backrow { margin-top: 40px !important; padding-top: 26px !important; border-top: 1px solid #EDF1EE !important; }
+
+/* FOOTER */
+.lf-footer { background: #0E1117 !important; padding: 44px 0 0 !important; }
+.lf-footer-grid { display: grid !important; grid-template-columns: 1.5fr 1fr 1fr 1.2fr !important; gap: 32px !important; padding-bottom: 34px !important; }
+.lf-footer-brand-copy { font-family: 'Inter', sans-serif !important; font-size: 12px !important; font-weight: 400 !important; color: #98A6B5 !important; line-height: 1.7 !important; margin-top: 16px !important; max-width: 260px !important; }
+.lf-footer-title { font-family: 'Inter', sans-serif !important; font-size: 12px !important; font-weight: 700 !important; color: #FFFFFF !important; letter-spacing: 0.06em !important; margin-bottom: 16px !important; }
+.lf-footer-list li, .lf-footer-contact li svg { color: #3FA76F !important; }
+.lf-footer-contact li {
+  font-family: 'Inter', sans-serif !important; font-size: 12px !important; font-weight: 400 !important;
+  color: #98A6B5 !important; line-height: 1.5 !important; margin-bottom: 10px !important;
+}
+.lf-footer-contact li { display: flex !important; align-items: flex-start !important; gap: 8px !important; }
+.lf-footer-list a, .lf-footer-contact a { color: #98A6B5 !important; transition: color 0.16s ease !important; }
+.lf-footer-list a:hover, .lf-footer-contact a:hover { color: #FFFFFF !important; }
+.lf-footer-list a.lf-here { color: #FFFFFF !important; font-weight: 700 !important; }
+.lf-subfooter { border-top: 1px solid rgba(255,255,255,0.1) !important; padding: 18px 0 !important; text-align: center !important; }
+.lf-subfooter-text { font-family: 'Inter', sans-serif !important; font-size: 11px !important; font-weight: 400 !important; color: #6B7885 !important; }
+.lf-root a:focus-visible, .lf-root button:focus-visible {
+  outline: 3px solid #0B6E3F !important; outline-offset: 3px !important; border-radius: 6px !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lf-root *, .lf-root *::before, .lf-root *::after {
+    animation-duration: 0.001ms !important; transition-duration: 0.001ms !important;
+  }
+}
+@media (max-width: 960px) {
+  .lf-doc-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .lf-toc { position: static !important; border-left: none !important; border-top: 1px solid #EAF0EC !important; padding-left: 0 !important; padding-top: 16px !important; order: 2 !important; }
+  .lf-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 28px !important; }
+  .lf-contact-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 540px) {
+  .lf-wrap { padding: 0 16px !important; }
+  .lf-page-title { font-size: 1.7rem !important; }
+  .lf-page-head { padding: 32px 0 30px !important; }
+  .lf-doc { padding: 32px 0 44px !important; }
+  .lf-footer-grid { grid-template-columns: 1fr !important; }
+  .lf-nav { gap: 14px !important; }
+}
+
+@media (max-width: 760px) {
+  .lf-nav {
+    order: 3 !important;
+    flex: 1 1 100% !important;
+    margin-left: 0 !important;
+    gap: 18px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-top: 12px !important;
+    border-top: 1px solid #EFF3F0 !important;
+  }
+  .lf-nav::-webkit-scrollbar { display: none !important; }
+  .lf-nav-link { flex: 0 0 auto !important; white-space: nowrap !important; }
+  .lf-lang { margin-left: auto !important; }
+  .lf-header-inner { gap: 14px !important; }
+}
+@media (max-width: 640px) {
+  .lf-table th, .lf-table td { font-size: 12px !important; padding: 9px 11px !important; }
+  .lf-cta { padding: 15px 24px !important; }
+}
+@media (max-width: 520px) {
+  .lf-header-inner { gap: 10px !important; }
+  .lf-logo { gap: 8px !important; }
+  .lf-logo-mark { height: 38px !important; min-width: 38px !important; max-width: 90px !important; }
+  .lf-logo-word { font-size: 16px !important; }
+  .lf-logo-sub { font-size: 7px !important; letter-spacing: 0.12em !important; }
+  .lf-lang-btn { font-size: 11px !important; padding: 7px 10px !important; }
+  .lf-lang { padding: 2px !important; }
+}
+@media (max-width: 380px) {
+  .lf-logo-word { font-size: 15px !important; }
+  .lf-lang-btn { font-size: 10px !important; padding: 7px 8px !important; }
+  .lf-logo-mark { height: 34px !important; min-width: 34px !important; }
+}
+</style>
+</head>
+<body>
+<div class="lf-root" id="lf-top">
+
+<div class="lf-topbar">
+  <div class="lf-wrap lf-topbar-inner">
+    <span class="lf-topbar-text">Extra 10% off when you pay with NBK or KFH cards</span>
+  </div>
+</div>
+
+<header class="lf-header">
+  <div class="lf-wrap lf-header-inner">
+    <a href="index.html" class="lf-logo" aria-label="LULU home">
+      <span class="lf-logo-mark"><img class="lf-logo-img" src="assets/lulu-logo.png" alt="LULU logo"></span>
+      <span class="lf-logo-text">
+        <span class="lf-logo-word">LULU</span>
+        <span class="lf-logo-sub">Grocery · Kuwait</span>
+      </span>
+    </a>
+    <nav class="lf-nav">
+      <a href="index.html#lf-deals" class="lf-nav-link">Mega Offers</a>
+      <a href="index.html#lf-cats" class="lf-nav-link">Categories</a>
+      <a href="index.html#lf-app" class="lf-nav-link">App</a>
+      <a href="contact.html" class="lf-nav-link">Contact</a>
+    </nav>
+      <div class="lf-lang" role="group" aria-label="Language">
+        <a href="#lf-top" class="lf-lang-btn lf-lang-on" aria-current="true">EN</a>
+        <a href="[ AR_URL ]" class="lf-lang-btn" lang="ar">عربي</a>
+      </div>
+  </div>
+</header>
+
+<section class="lf-page-head">
+  <div class="lf-wrap">
+    <div class="lf-crumb">
+      <a href="index.html"><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg> Home</a><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span>Shipping &amp; delivery</span>
+    </div>
+    <h1 class="lf-page-title">Shipping &amp; delivery</h1>
+    <p class="lf-page-sub">Where we deliver, what it costs, when it arrives, and what happens when something goes sideways. Windows and fees are always shown before you pay.</p>
+    <span class="lf-updated"><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Last updated: [ LAST UPDATED ]</span>
+  </div>
+</section>
+
+<section class="lf-doc">
+  <div class="lf-wrap lf-doc-grid">
+
+    <nav class="lf-toc">
+      <p class="lf-toc-title">On this page</p>
+      <ul>
+        <li><a href="#areas">Where we deliver</a></li>
+        <li><a href="#charges">Delivery charges</a></li>
+        <li><a href="#timing">Order cut-offs and timing</a></li>
+        <li><a href="#tracking">Tracking your order</a></li>
+        <li><a href="#substitutions">Substitutions and out-of-stock items</a></li>
+        <li><a href="#receiving">Receiving your delivery</a></li>
+        <li><a href="#changes">Changing or cancelling</a></li>
+        <li><a href="#delays">Delays outside our control</a></li>
+      </ul>
+    </nav>
+
+    <div class="lf-doc-body">
+      <h2 class="lf-h2" id="areas">Where we deliver</h2>
+
+      <p class="lf-p">We deliver across the State of Kuwait. Speed depends on how close you are to a fulfilment store, so the same order can arrive same-day in one city and next-day in another.</p>
+      <div class="lf-tablewrap"><table class="lf-table">
+        <tr><th>Zone</th><th>Cities</th><th>Delivery window</th></tr>
+        <tr><td>Metro</td><td>Kuwait City, Hawalli, Salmiya, Fahaheel</td><td>[ METRO WINDOW ]</td></tr>
+        <tr><td>Major cities</td><td>Makkah, Madinah, Taif, Buraidah, Abha, Tabuk</td><td>[ MAJOR CITY WINDOW ]</td></tr>
+        <tr><td>Other regions</td><td>Remaining serviceable postcodes</td><td>[ REGIONAL WINDOW ]</td></tr>
+      </table></div>
+      <p class="lf-p">Enter your postcode at checkout to see the exact windows available to you. If no window appears, we do not currently reach that address — <a href="contact.html">tell us</a> and we will flag it for expansion.</p>
+
+      <h2 class="lf-h2" id="charges">Delivery charges</h2>
+
+      <div class="lf-tablewrap"><table class="lf-table">
+        <tr><th>Order value</th><th>Standard delivery</th><th>Express delivery</th></tr>
+        <tr><td>Under KWD 8.333</td><td>[ STANDARD FEE ]</td><td>[ EXPRESS FEE ]</td></tr>
+        <tr><td>KWD 8.333 and above</td><td><strong>Free</strong></td><td>[ EXPRESS FEE ]</td></tr>
+      </table></div>
+      <p class="lf-p">Charges are shown before you pay, never added afterwards. Free delivery is calculated on the order value <strong>after</strong> discounts and <strong>before</strong> VAT, so a basket that drops below KWD 8.333 once a promotion applies will attract the standard fee.</p>
+      <div class="lf-callout">
+        <p><strong>Bulky items.</strong> A small number of heavy or oversized products carry a surcharge because they need a second handler. Where that applies it is shown on the product itself and again in your basket.</p>
+      </div>
+
+      <h2 class="lf-h2" id="timing">Order cut-offs and timing</h2>
+
+      <ul class="lf-list">
+        <li><strong>Same-day delivery</strong> — order before [ SAME DAY CUTOFF ] in metro zones.</li>
+        <li><strong>Next-day delivery</strong> — order before [ NEXT DAY CUTOFF ].</li>
+        <li><strong>Scheduled slots</strong> — pick a window up to [ SCHEDULING HORIZON ] ahead at checkout.</li>
+      </ul>
+      <p class="lf-p">Fresh produce, chilled dairy and frozen items are packed last and travel in temperature-controlled bags. During Ramadan and public holidays, demand is heavy and windows fill early in the day — booking a slot is more reliable than ordering on demand.</p>
+
+      <h2 class="lf-h2" id="tracking">Tracking your order</h2>
+
+      <p class="lf-p">Every order gets a tracking link by SMS and email the moment it is picked. Live driver tracking is available in the app once the order is on the road.</p>
+      <div class="lf-tablewrap"><table class="lf-table">
+        <tr><th>Status</th><th>What it means</th></tr>
+        <tr><td>Confirmed</td><td>Payment accepted, order queued at the store</td></tr>
+        <tr><td>Picking</td><td>Staff are collecting your items — changes are no longer possible</td></tr>
+        <tr><td>Out for delivery</td><td>With a driver; live location visible in the app</td></tr>
+        <tr><td>Delivered</td><td>Handed over and signed for or confirmed by OTP</td></tr>
+      </table></div>
+
+      <h2 class="lf-h2" id="substitutions">Substitutions and out-of-stock items</h2>
+
+      <p class="lf-p">Grocery stock moves fast. If an item sells out between your order and picking, we will do one of the following, based on the preference you set at checkout:</p>
+      <ul class="lf-list">
+        <li><strong>Substitute with a similar item</strong> of equal or greater value at no extra cost — you are never charged more than you agreed.</li>
+        <li><strong>Refund the item</strong> and deliver the rest of the order.</li>
+      </ul>
+      <p class="lf-p">You will see exactly what changed in your delivery note. If a substitution is not right for you, hand it back to the driver and it is refunded in full — no return process needed.</p>
+
+      <h2 class="lf-h2" id="receiving">Receiving your delivery</h2>
+
+      <ul class="lf-list">
+        <li>Someone aged 18 or over must be present to accept the order.</li>
+        <li>Delivery is confirmed by signature or by a one-time code sent to your phone.</li>
+        <li>Please check chilled and frozen items while the driver is still there — problems are far easier to resolve at the door than afterwards.</li>
+      </ul>
+      <p class="lf-p"><strong>If nobody is home:</strong> the driver will attempt contact and wait [ WAIT TIME ]. If we still cannot reach you the order returns to the store and we will contact you to rebook. A repeat failed delivery may attract a re-delivery fee of [ REDELIVERY FEE ], and perishable items cannot be re-sent — those are refunded.</p>
+
+      <h2 class="lf-h2" id="changes">Changing or cancelling</h2>
+
+      <p class="lf-p">You can change or cancel free of charge until the order moves to <strong>Picking</strong>. After that point staff have already collected chilled and fresh goods, so the order proceeds and anything unwanted is handled through the <a href="returns-policy.html">Returns policy</a> instead.</p>
+      <p class="lf-p">To cancel, open <em>Orders</em> in the app or <a href="contact.html">contact support</a> with your order number.</p>
+
+      <h2 class="lf-h2" id="delays">Delays outside our control</h2>
+
+      <p class="lf-p">Weather, road closures, sandstorms and civil disruption can push a delivery outside its window. Where that happens we will contact you with a revised time, and you may cancel for a full refund if the new window does not work for you.</p>
+      <p class="lf-p">Delivery windows are estimates, not guarantees, except where a paid express service states otherwise.</p>
+
+      <div class="lf-backrow">
+        <a href="index.html" class="lf-cta"><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Back to shopping</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="lf-footer">
+  <div class="lf-wrap">
+    <div class="lf-footer-grid">
+
+      <div>
+        <a href="index.html" class="lf-logo">
+          <span class="lf-logo-mark lf-logo-mark-dark"><img class="lf-logo-img" src="assets/lulu-logo.png" alt="LULU logo"></span>
+          <span class="lf-logo-text">
+            <span class="lf-logo-word" style="color:#FFFFFF !important;">LULU</span>
+            <span class="lf-logo-sub" style="color:#98A6B5 !important;">Grocery · Kuwait</span>
+          </span>
+        </a>
+        <p class="lf-footer-brand-copy">Everyday groceries at hypermarket prices — staples, fresh produce and home care, delivered across Kuwait from a store near you.</p>
+      </div>
+
+      <div>
+        <p class="lf-footer-title">Quick links</p>
+        <ul class="lf-footer-list">
+          <li><a href="index.html#lf-deals">Mega offers</a></li>
+          <li><a href="index.html#lf-deals">Products</a></li>
+          <li><a href="index.html#lf-cats">Categories</a></li>
+          <li><a href="index.html#lf-news">Subscribe</a></li>
+          <li><a href="index.html#lf-reviews">Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="lf-footer-title">Customer help</p>
+        <ul class="lf-footer-list">
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shipping-delivery.html" class="lf-here">Shipping &amp; delivery</a></li>
+          <li><a href="returns-policy.html">Returns policy</a></li>
+          <li><a href="privacy-policy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="lf-footer-title">Contact</p>
+        <ul class="lf-footer-contact">
+          <li><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Arabian Gulf Street, Sharq, Kuwait City 15300</span></li>
+          <li><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.83 16.57a1 1 0 0 0 1.22-.3l.35-.47A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.47.35a1 1 0 0 0-.29 1.24 14 14 0 0 0 6.39 6.38"/></svg><a href="tel:+96522250100">+965 2225 0100</a></li>
+          <li><svg class="lf-ic lf-ic-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:care@lulu-kw-supermarket.app">care@lulu-kw-supermarket.app</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="lf-subfooter">
+    <div class="lf-wrap"><span class="lf-subfooter-text">© 2026 LULU. All rights reserved.</span></div>
+  </div>
+</footer>
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('.lf-root');
+  if (!root) { return; }
+  var logos = root.querySelectorAll('.lf-logo-img');
+  for (var i = 0; i < logos.length; i++) {
+    if ((logos[i].getAttribute('src') || '').charAt(0) !== '[' && logos[i].parentNode) {
+      logos[i].parentNode.classList.add('lf-logo-mark-on');
+    }
+  }
+  root.addEventListener('click', function (e) {
+    var el = e.target;
+    while (el && el !== root && el.tagName !== 'A') { el = el.parentNode; }
+    if (!el || el.tagName !== 'A') { return; }
+    var href = el.getAttribute('href') || '';
+    if (href.charAt(0) === '[' || href.indexOf(':[') !== -1) { e.preventDefault(); }
+  });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var toc = root.querySelectorAll('.lf-toc a[href^="#"]');
+  for (var t = 0; t < toc.length; t++) {
+    toc[t].addEventListener('click', function (e) {
+      var target = document.getElementById((this.getAttribute('href') || '').slice(1));
+      if (!target) { return; }
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    });
+  }
+})();
+</script>
+</body>
+</html>
