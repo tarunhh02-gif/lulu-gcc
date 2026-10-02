@@ -1,1 +1,15 @@
-{ "projects": { "default": "lulu-kw-hyperdeals" } }
+{
+  "projects": {
+    "default": "devtest-kotha"
+  },
+  "targets": {
+    "devtest-kotha": {
+      "hosting": {
+        "lulu-kw": [
+          "lulu-kw-hyperdeals-1"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
