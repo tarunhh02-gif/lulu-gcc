@@ -41,7 +41,10 @@
           citiesAr: ['مسقط', 'صلالة', 'صحار', 'نزوى', 'صور'] }
   };
   var SUPPORTED = ['KW', 'SA', 'AE', 'BH', 'QA', 'OM'];
-  var DEFAULT = 'KW';                     // detection fail → purana content (regression nahi)
+  /* DEFAULT = SA  (3-Oct-2026, Malik): jo bhi country detect na ho — ya jo
+     supported list me na ho (India, Pakistan, US...) — usko SAUDI dikhe.
+     Pehle ye 'KW' tha, isliye Saudi ad pe bhi Kuwaiti page khul raha tha. */
+  var DEFAULT = 'SA';
   var CACHE_KEY = '_lulu_geo_v1';
   var CACHE_MS = 6 * 60 * 60 * 1000;      // 6 ghante
 
@@ -98,7 +101,8 @@
   var R = REGIONS[CC];
   window.__LULU_CC = CC;
   window.__LULU_REGION = R;
-  if (forced) { cacheWrite(forced); }
+  /* `?c=XX` sirf us page view ke liye — cache me store NAHI karte, warna
+     testing/preview ne baad ke visitors ko pin kar diya (stale region). */
 
   /* Cart/drawer jaise dynamic hisse in do ko use karte hain. __LULU_NUM sirf
      formatting karta hai (multiply NAHI) — kyunki cart ka number pehle hi
