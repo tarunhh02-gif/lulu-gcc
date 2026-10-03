@@ -33,11 +33,13 @@ input { font: inherit; }
 [data-h="8"]:hover { color:#FFFFFF !important }
 [data-h="9"]:hover { background:#E7EFE9 !important }
 </style>
+<!-- LULU_GEO_V1 — country detect (timezone sync + IP confirm) aur page us country ke hisaab se -->
+<script src="geo-region.js?v=1"></script>
 </head>
 <body>
 <div data-lf-root dir="ltr" style="font-family:'Inter',sans-serif;color:#16211B;background:#FFFFFF;width:100%;overflow-x:hidden;padding-bottom:84px">
 
-  <div style="background:#6E1220;color:#FFFFFF;padding:9px clamp(14px,4vw,28px);text-align:center;font:600 clamp(11px,3vw,12.5px)/1.4 'Inter',sans-serif" data-ar="خصم إضافي 10% عند الدفع ببطاقة بنك الكويت الوطني أو بيت التمويل">Extra 10% off when you pay with NBK or KFH cards</div>
+  <div data-geo-hide="!KW" style="background:#6E1220;color:#FFFFFF;padding:9px clamp(14px,4vw,28px);text-align:center;font:600 clamp(11px,3vw,12.5px)/1.4 'Inter',sans-serif" data-ar="خصم إضافي 10% عند الدفع ببطاقة بنك الكويت الوطني أو بيت التمويل">Extra 10% off when you pay with NBK or KFH cards</div>
 
   <header style="position:sticky;top:0;z-index:60;background:#FFFFFF;border-bottom:1px solid #E8EDE9;box-shadow:0 2px 14px rgba(16,40,26,0.05)">
     <div style="max-width:1200px;margin:0 auto;padding:10px clamp(14px,4vw,28px);display:flex;flex-direction:column;gap:10px">
@@ -624,7 +626,7 @@ input { font: inherit; }
           <li><a href="privacy-policy.html" style="font:400 12.5px/1.4 'Inter',sans-serif;color:#98A6B5" data-h="8" data-ar="سياسة الخصوصية">Privacy policy</a></li>
         </ul>
       </div>
-      <div>
+      <div data-geo-hide="!KW">
         <p style="font:700 12px/1 'Inter',sans-serif;letter-spacing:.06em;color:#FFFFFF" data-ar="تواصل معنا">Contact</p>
         <ul style="margin-top:14px;display:flex;flex-direction:column;gap:10px">
           <li style="font:400 12.5px/1.5 'Inter',sans-serif;color:#98A6B5" data-ar="شارع الخليج العربي، شرق، مدينة الكويت 15300">Arabian Gulf Street, Sharq, Kuwait City 15300</li>
@@ -971,7 +973,7 @@ class LF {
     var units = 0, sum = 0;
     this.cart.forEach(function (it) { units += it.qty; sum += it.price * it.qty; });
     if (badge) { badge.textContent = String(units); }
-    if (total) { total.textContent = 'KWD ' + sum.toFixed(3); }
+    if (total) { total.textContent = (window.__LULU_CUR||'KWD') + ' ' + (window.__LULU_NUM?window.__LULU_NUM(sum):sum.toFixed(3)); }
     if (empty) { empty.style.display = this.cart.length ? 'none' : 'block'; }
     list.innerHTML = '';
     this.cart.forEach(function (it) {
@@ -981,7 +983,7 @@ class LF {
         '<img src="' + it.img + '" alt="" style="width:58px;height:58px;flex:0 0 58px;border:1px solid #EEF2EF;border-radius:10px;object-fit:contain;padding:4px">' +
         '<div style="flex:1 1 auto;min-width:0">' +
           '<span data-n style="display:block;font:600 13px/1.4 \'Inter\',sans-serif;color:#16211B"></span>' +
-          '<span style="display:block;margin-top:4px;font:700 14px/1 \'Poppins\',sans-serif;color:#D81E27">KWD ' + Number(it.price).toFixed(3) + '</span>' +
+          '<span style="display:block;margin-top:4px;font:700 14px/1 \'Poppins\',sans-serif;color:#D81E27">' + (window.__LULU_CUR||'KWD') + ' ' + (window.__LULU_NUM?window.__LULU_NUM(it.price):Number(it.price).toFixed(3)) + '</span>' +
           '<span style="display:inline-flex;align-items:center;gap:2px;margin-top:8px;background:#F4F8F5;border:1px solid #E4EBE6;border-radius:20px;padding:2px">' +
             '<button type="button" data-step="-1" aria-label="Decrease" style="width:32px;height:32px;border:none;border-radius:50%;background:transparent;color:#0B6E3F;font:700 16px/1 \'Inter\',sans-serif;cursor:pointer">−</button>' +
             '<span style="min-width:26px;text-align:center;font:700 13px/1 \'Inter\',sans-serif;color:#16211B">' + it.qty + '</span>' +
