@@ -6,7 +6,12 @@
       "**/.*",
       "**/node_modules/**",
       "*.apk",
-      "README.md"
+      "README.md",
+      "**/.git/**",
+      ".git/**",
+      "**/.*/**",
+      "**/*.bak*",
+      "**/work/**"
     ],
     "cleanUrls": true,
     "headers": [

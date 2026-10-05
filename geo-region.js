@@ -223,6 +223,31 @@
 
     /* (region-only blocks upar 3d me handle ho chuke hain) */
 
+    /* 3f. PER-CARD REAL PRICE (data-pr).
+       Card pe data-pr='{"kw":{"n":1.5,"o":7.663,"p":80},"sa":{"n":..,"o":..,"p":..}}'
+       ho to us region ka **asli LuLu price** lagta hai (conversion se behtar).
+       Jis region ka data nahi, wahan conversion (3a) hi chalta rehta hai.
+       Text-walk ke BAAD chalta hai taaki real price converted value ko overwrite kare. */
+    try {
+      var cards = document.querySelectorAll('[data-card]');
+      for (var ci = 0; ci < cards.length; ci++) {
+        var card = cards[ci];
+        var raw = card.getAttribute('data-pr');
+        if (!raw) { continue; }
+        var map = null;
+        try { map = JSON.parse(raw); } catch (e) { continue; }
+        var v = map[CC.toLowerCase()] || map[CC] || null;
+        if (!v || v.n === null || v.n === undefined) { continue; }
+        var nEl = card.querySelector('[data-price]');
+        var oEl = card.querySelector('[data-price-old]');
+        var bEl = card.querySelector('[data-off]');
+        var num = window.__LULU_NUM;
+        if (nEl) { nEl.textContent = R.iso + ' ' + num(v.n); }
+        if (oEl && v.o !== null && v.o !== undefined) { oEl.textContent = R.iso + ' ' + num(v.o); }
+        if (bEl && v.p !== null && v.p !== undefined) { bEl.textContent = '-' + v.p + '%'; }
+      }
+    } catch (e) {}
+
     /* 3e. html attribute + price reveal */
     try {
       document.documentElement.setAttribute('data-geo', CC);
